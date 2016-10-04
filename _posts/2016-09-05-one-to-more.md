@@ -14,17 +14,17 @@ event.type搭配switch语法
 
     var btn = document.getElementById("myBtn");
     var handler = function(event){
-    switch(event.type){
-    case "click" :
-    alert("click");
-    break;
-    case "mouseover" :
-    alert("mouseover");
-    break;
-    case "mouseout"
-    alert("mouseout");
-    break;
-    }
+	    switch(event.type){
+		    case "click" :
+			    alert("click");
+			    break;
+		    case "mouseover" :
+			    alert("mouseover");
+			    break;
+		    case "mouseout"
+			    alert("mouseout");
+			    break;
+	    }
     }
     btn.onclick = handler;
     btn.onmouseover = handler;
