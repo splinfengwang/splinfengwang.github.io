@@ -10,7 +10,7 @@ tag: 变量、作用域和内存问题
 {:toc}
 
 
-```javascript
+```html
   var ihubo = {
     nickName  : "草依山",
     site : "http://jser.me"
