@@ -6,10 +6,10 @@ url:
 resume_site: 
 github: https://github.com/splinfengwang
 baseurl: ""
-description: 王林峰的前端学习笔记。
+description: 的前端学习笔记。
 meta_description: 王林峰;个人博客
-motto: It's our wits that make us men.
-banner: 学而不思则罔，思而不学则殆。
+motto: 233333333333333333.
+banner: 在工作中学习，在学习中寻求乐趣。
 
 #permalink: /:categories/:year/:month/:day/:title/
 permalink: /:year/:month/:day/:title/
