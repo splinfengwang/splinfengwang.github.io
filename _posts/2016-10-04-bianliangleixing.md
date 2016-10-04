@@ -2,8 +2,8 @@
 layout: post
 title:  变量类型
 date:   2016-10-04 11:27:00 +0800
-categories: document
-tag: 教程
+categories: js笔记
+tag: js笔记
 ---
 
 * content
