@@ -10,12 +10,6 @@ tag: 变量、作用域和内存问题
 {:toc}
 
 
-```html
-  var i = {
-    nickName  : "草依山",
-    site : "http://jser.me"
-  }
-```
 
 * 基本类型：指简单的数据段；
 
