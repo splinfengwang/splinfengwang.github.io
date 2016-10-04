@@ -14,11 +14,14 @@ tag: js笔记
 
 
 事件委托
-----------
+===========
 
 >对“事件处理程序过多”问题的解决方案就是事件委托。事件委托利用了事件冒泡，只指定一个事件处理程序，就可以管理某一类型的所有事件。
 
-  
+
+真的假的
+-------------
+
 	<ul id="myLinks">
 	<li id="doSomewhere">doSomewhere</li>
 	<li id="goSomething">goSomething</li>
@@ -69,7 +72,7 @@ tag: js笔记
     document.getElementById("myDiv").innerHTML = "processing...";
 	};
 	</script>
-	
+
 测试
 -------------
 >在上例中，我们在程序执行完毕之后，移除元素之前先把执行程序销毁了，避免“空事件处理程序”造成内存问题。
