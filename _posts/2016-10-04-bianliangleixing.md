@@ -69,6 +69,7 @@ tag: js笔记
     document.getElementById("myDiv").innerHTML = "processing...";
 	};
 	</script>
+	
 测试
 -------------
 >在上例中，我们在程序执行完毕之后，移除元素之前先把执行程序销毁了，避免“空事件处理程序”造成内存问题。
