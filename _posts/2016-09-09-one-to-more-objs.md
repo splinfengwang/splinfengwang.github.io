@@ -10,8 +10,6 @@ tag: 事件
 {:toc}
 
 
->仅保留关键代码
-
 	var EventUtil = {
 	    addHandler: function(element, type, handler){
 	        if (element.addEventLlistener){//优先监测是否存在DOM2级方法
