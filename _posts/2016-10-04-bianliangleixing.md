@@ -10,60 +10,47 @@ tag: 变量、作用域和内存问题
 {:toc}
 
 
-*每个函数函数都是对象，都会占用内存；内存中的对象越多，性能就越差。必须事先制定所有事件处理程序而导致的DOM访问次数，会延迟整个页面的交互就绪时间。*
+* 基本类型：指简单的数据段；
 
-事件委托
-===========
-
->对“事件处理程序过多”问题的解决方案就是事件委托。事件委托利用了事件冒泡，只指定一个事件处理程序，就可以管理某一类型的所有事件。
-
-	<ul id="myLinks">
-	<li id="doSomewhere">doSomewhere</li>
-	<li id="goSomething">goSomething</li>
-	<li id="sayHi">sayHi</li>
-	</ul>
+    >基本数据类型是按值访问的，因为可以操作保存在变量中的实际值；
     
-    <script>
-        var list = document.getElementById("myLinks");
-        
-        EventUtil.addHandler(list, "click", function(event){
-            event = EventUtil.getEvent(event);
-            var target = EventUtil.getTarget(event);
-            
-            switch(target.id){
-                case "doSomewhere":
-                    document.title = "...";
-                    break;
-                
-                case "goSomewhere":
-                    location.herf = "...";
-                    break;
-                    
-                case "sayHi":
-                    alert("hi");
-                    break;
-            }
-        })
-    </script>
+* 引用类型：指的是那些可能有多个值构成的对象；
+
+    >javascript不允许直接访问内存中的位置，也就是说不能直接操作对象的内存空间。在操作对象时，实际上是在操作对象的引用而不是实际的对象。为此，引用类型的值是按引用访问的。严谨地说，当复制保存着对象的某个变量时，操作的是对象的引用。但在为对象添加属性时，操作的是实际的对象。
+
+
+### 动态的属性
     
+* 定义基本类型值和引用类型值得方式是类似的：创建一个变量并为该变量赋值。
+* 对不同类型值可以执行的操作大相径庭。
+* 对于引用类型的值，我们可以添加、删除和修改其属性和方法。
+		
+		var person = new Object();
+		person.name = "Nick";
+		alert(person.name); //"Nick"
 
-上例中，我们使用事件委托只为`<ul>`元素添加了一个onclick事件处理程序。由于所有列表项都是这个元素的子节点，而且它们的事件会冒泡，所以单击事件最终会被这个函数处理。事件目标是被单击的列表项，因而可以通过检测id属性来决定采取适当的操作。
-    
-移除事件处理程序
-===========  
->对“事件处理程序过多”问题的另一种解决方案就是在不需要的时候移除事件处理程序。因为内存中留有那些过时不用的“空事件处理程序”（dangling event handler），也是造成WEB应用程序内存与性能问题的主要原因
+	> 这个例子创建了一个对象并将其保存在变量person中。然后，我们为该对象添加了一个名为name的属性。紧接着，有通过`alert()`函数访问了这个新属性。
 
-    <div id="myDiv">
-        <input type="button" value="click me" id="myBtn">
-    </div>
+### 复制变量值
 
-	<script>
-	var btn = document.getElementById("myBtn");
-	btn.onclick = function(event){
-    ......
-    btn.onclick = null; //移除事件处理程序
-    document.getElementById("myDiv").innerHTML = "processing...";
-	};
-	</script>
+* 在从一个变量向另一个变量复制基本类型值和引用类型值时，存在不同
+* 如果从一个变量向另一个变量复制基本类型值，会在变量对象上创建一个新值，然后把该值复制到为新变量分配的位置上。
+		
+		var num = 5;
+		var num1 = num;
+	
+	> 这个例子中，num和num1保存的值是都5,但是两者的值是完全独立的，num1是num的一个副本。两个变量可以参与任何操作而不会互相影响。
 
->在上例中，我们在程序执行完毕之后，移除元素之前先把执行程序销毁了，避免“空事件处理程序”造成内存问题。
+* 当一个变量向另一个变量复制引用类型的值时。同样也会将存储在变量对象中的值复制一份放到为新变量分配的空间中。不同的是这个值的副本其实是一个指针，而这个指针指向存储在堆中的一个对象。复制操作结束后，两个变量实际上将引用同一个对象。因此，改变其中一个变量，就会影响另一个变量。
+		
+		var obj1 = new Object();
+		var obj2 = obj1;
+		obj1.name = "Nick";
+		alert(obj2.name); //"Nick"
+
+	>在这个例子中，两个变量会相互影响，因为都是引用同一个对象。
+
+### 传递参数
+
+* 在向参数传递基本类型的值时，被传递的值会被复制给一个局部变量（即命名参数，或者是arguments对象中的一个元素）。
+* 在向参数传递引用类型的值时，会把这个值在内存中的地址复制给一个局部变量，因此这个局部变量的变化就会反映在函数的外部。
