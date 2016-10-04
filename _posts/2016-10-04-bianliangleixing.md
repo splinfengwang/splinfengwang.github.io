@@ -10,6 +10,13 @@ tag: 变量、作用域和内存问题
 {:toc}
 
 
+```javascript
+  var ihubo = {
+    nickName  : "草依山",
+    site : "http://jser.me"
+  }
+```
+
 * 基本类型：指简单的数据段；
 
     基本数据类型是按值访问的，因为可以操作保存在变量中的实际值；
@@ -25,10 +32,11 @@ tag: 变量、作用域和内存问题
 * 对不同类型值可以执行的操作大相径庭。
 * 对于引用类型的值，我们可以添加、删除和修改其属性和方法。
 		
-```var person = new Object();
-person.name = "Nick";
-alert(person.name); //"Nick"
-```
+		var person = new Object();
+		person.name = "Nick";
+		alert(person.name); //"Nick"
+
+
 	> 这个例子创建了一个对象并将其保存在变量person中。然后，我们为该对象添加了一个名为name的属性。紧接着，有通过`alert()`函数访问了这个新属性。
 
 ### 复制变量值
