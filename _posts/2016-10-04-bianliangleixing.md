@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  变量类型
-date:   10/4/2016 12:07:42 PM 
+date:   2016/10/4 12:12:34 
 categories: js笔记
 tag: js笔记
 ---
