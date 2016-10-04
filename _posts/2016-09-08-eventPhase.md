@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  eventPhase属性确定事件流阶段
-date:   2016/9/5 14:52:47  
+date:   2016/9/8 14:52:47  
 categories: Javascript
 tag: 事件
 ---

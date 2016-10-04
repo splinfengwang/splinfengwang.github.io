@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  跨浏览器的事件对象处理
-date:   2016/9/5 14:52:47  
+date:   2016/9/9 14:52:47  
 categories: Javascript
 tag: 事件
 ---
