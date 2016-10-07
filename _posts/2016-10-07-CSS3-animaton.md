@@ -20,7 +20,7 @@ tag:
 
 ***
 
-### 使用方法：transition: property duration timing-function
+### 使用方法：`transition: property duration timing-function`
   * property：表示对哪个属性进行平滑过渡；
   * duration：表示在多久时间内完成属性值的平滑过渡；
   * timing-function：表示通过什么方法进行平滑过渡；
@@ -124,7 +124,7 @@ div:hover{ //使用关键帧集合
 ```
 
 > 上例实现的动画中带有如下几个关键帧：
-> 
+>
 - 开始帧：0%，红色背景；
 - 关键帧：40%，深蓝色背景；
 - 关键帧：70%，黄色背景；
