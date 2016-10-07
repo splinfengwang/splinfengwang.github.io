@@ -10,7 +10,7 @@ tag:
 {:toc}
 
 
-#transform功能
+# transform功能
 
 ---
 
@@ -31,7 +31,7 @@ tag:
 
  * 使用scale方法：实现文字或图像的缩放处理，在参数中指定缩放倍率。例如
 
-    ```css
+    ```
     div{
         transform: scaleX(0.5); //表示缩小一半
         transform: scaleY(0.5); //表示缩小一半
@@ -41,7 +41,7 @@ tag:
 
  * 可以分别指定元素的水平的放大倍率与垂直方向的放大倍率。例如
 
-    ```css
+    ```
     div{
        transform: scale(0.5, 2); //表示水平缩小一半，垂直方向放大一倍
     }
