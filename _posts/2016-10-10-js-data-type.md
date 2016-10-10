@@ -71,10 +71,11 @@ if (car != null){
 Boolean类型只有两个字面值：true和false。这两个值和数字值没有相关，因此true不一定等于1；false也不一定等于0。
 
 - Boolean()：转型函数，可以将一个值转化为其对应的Boolean值。因为所有类型的值都有与这两个Boolean值等价的值。至于返回的值是true还是false，取决于要转换的值得数据类型及其实际值。
-```js
-var msg = "hello world";
-var msgBln = Boolean(msg); //true
-```
+
+    ```js
+    var msg = "hello world";
+    var msgBln = Boolean(msg); //true
+    ```
 
 数据类型 | 转换为true的值 | 转换为false的值
 ---|---|---
@@ -88,24 +89,27 @@ Undefined | n/a | undefined
 
 Number类型包括八进制、十进制、十六进制。
 - 八进制字面值的第一位必须是0，然后是八进制数字序列（0~7）。如果字面值中的数值超出了范围，那么前导0将被忽略，后面的数值将被当作十进制数值解析
-```js
-var octalNum1 = 070; //八进制的56
-var octalNum2 = 079; //无效——解析为79
-var octalNum3 = 08; //无效——解析为8
-```
+
+    ```js
+    var octalNum1 = 070; //八进制的56
+    var octalNum2 = 079; //无效——解析为79
+    var octalNum3 = 08; //无效——解析为8
+    ```
 
 - 十六进制的前两位必须是0x，后跟任何十六进制数字（0~9及A~F）。其中字母A~F大小写不区分。
-```js
-var hexNum1 = 0xA; //十六进制的10
-var hexNum2 = 0x1f; //十六进制的31
-```
+
+    ```js
+    var hexNum1 = 0xA; //十六进制的10
+    var hexNum2 = 0x1f; //十六进制的31
+    ```
 
 - 浮点数值  定义：就是该数值中必须包含一个小数点
     - e表示法（科学记数法）：用e表示法表示的数值等于e前面的数值乘以10的指数次幂。
-    ```js
-    var floatNum1 = 3.125e7;  //等于31250000
-    var floatNum2 = 3.125e-3;  //等于0.003125
-    ```
+
+        ```js
+        var floatNum1 = 3.125e7;  //等于31250000
+        var floatNum2 = 3.125e-3;  //等于0.003125
+        ```
 
     >关于浮点数值计算会产生舍入误差的问题。
 
@@ -113,10 +117,11 @@ var hexNum2 = 0x1f; //十六进制的31
 
     js的最大数值保存在 **`Number.MAX_VALUE`** 中，最小数值保存在 **`Number.MIN_VALUE`** 中。
 使用函数isFinite()，如果参数位于最小和最大值之间会返回true。
-```js
-var result = Number.MAX_VALUE + Number.MIN_VALUE;
-alert(isFinite(result));  //false
-```
+
+    ```js
+    var result = Number.MAX_VALUE + Number.MIN_VALUE;
+    alert(isFinite(result));  //false
+    ```
 
 - NaN：即非数值（Not a Number），是一个特殊的数值，这个数值用于表示一个本来要返回数值的操作数未返回数值的情况，从而避免抛出错误。
     >0除以0返回NaN，正数除以0返回Infinity，负数除以0返回-Infinity。
@@ -124,6 +129,7 @@ alert(isFinite(result));  //false
     - 任何涉及到NaN的操作（例如NaN/0）都会返回NaN。
     - NaN与任何值都不相等，包括NaN本身。`alert(NaN == NaN); //false`
     - isNaN()函数，在接收到一个值之后，会尝试将这个值转换为数值。无法转换则返回false。
+
         ```
         alert(isNaN(NaN)); //true
         alert(isNaN(10));  //false(转换成10)
@@ -143,6 +149,7 @@ alert(isFinite(result));  //false
             - 空的话转为0
             - 乱七八糟转为NaN
     - parseInt()：
+
         ```JS
         var num1 = parseInt("10",2);  //按二进制解析
         var num2 = parseInt("10",8);  //按八进制解析
@@ -157,6 +164,7 @@ alert(isFinite(result));  //false
 - toString()
     - 除了null和undefined值没有这个方法之外，其他类型都有；
     - 通过传递基数，可输出二、八、十六等任意有效进制的字符串值
+
         ```js
         var num = 10;
         alert(num.toString(2));  // "1010"
@@ -168,9 +176,10 @@ alert(isFinite(result));  //false
 
 ### Object类型
 对象其实就是一组数据和功能的集合。对象可以通过执行new操作符后跟要创建的对象类型的名称来创建。而创建Object类型的实例并为其添加属性以及方法，就可以创建自定义对象，例如：
-```js
-var o = new Object();
-```
+
+    ```js
+    var o = new Object();
+    ```
 - Object类型是所有它的实例的基础。换句话说，Object类型所具有的任何属性和方法也同样存在与更具体的对象中。
 
 - Object的每个实例都具有下列属性和方法：
