@@ -9,9 +9,8 @@ tag: 基本概念
 * content
 {:toc}
 
-# 数据类型
 
-> 5种基本类型
+# 5种基本类型
 > - **Undifined**
 > - **Null**
 > - **Boolean**
