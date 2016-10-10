@@ -59,6 +59,7 @@ var msg = null;
 alert(typeof msg); //object
 ```
 > 如果定义的变量准备在将来用于保存对象，那么最好将该变量初始化为null而不是其他值。这样一来，只要直接检查null值就可以知道相应的变量是否已经保存了一个对象的引用。例如
+
 ```js
 if (car != null){
     //对car对象执行操作
@@ -167,7 +168,7 @@ Number类型包括八进制、十进制、十六进制。
     - 除了null和undefined值没有这个方法之外，其他类型都有；
     - 通过传递基数，可输出二、八、十六等任意有效进制的字符串值
 
-        ```js
+        ```javascript
         var num = 10;
         alert(num.toString(2));  // "1010"
         ```
