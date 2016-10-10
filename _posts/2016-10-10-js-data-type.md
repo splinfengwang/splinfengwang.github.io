@@ -67,7 +67,7 @@ if (car != null){
 
 > 实际上，undefined值是派生自null值的：`alert(null == undefined); //true`
 
-# Boolean类型
+### Boolean类型
 
 Boolean类型只有两个字面值：true和false。这两个值和数字值没有相关，因此true不一定等于1；false也不一定等于0。
 
