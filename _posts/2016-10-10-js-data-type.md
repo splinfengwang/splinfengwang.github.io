@@ -134,13 +134,13 @@ alert(isFinite(result));  //false
     - NaN与任何值都不相等，包括NaN本身。`alert(NaN == NaN); //false`
     - isNaN()函数，在接收到一个值之后，会尝试将这个值转换为数值。无法转换则返回false。
 
-    ```
-    alert(isNaN(NaN)); //true
-    alert(isNaN(10));  //false(转换成10)
-    alert(isNaN("10"));  //false(转换成10)
-    alert(isNaN("blue"));  //true
-    alert(isNaN(true));  //false(转换成1)
-    ```
+```
+alert(isNaN(NaN)); //true
+alert(isNaN(10));  //false(转换成10)
+alert(isNaN("10"));  //false(转换成10)
+alert(isNaN("blue"));  //true
+alert(isNaN(true));  //false(转换成1)
+```
 
 - 数值转换
     - Number()：
@@ -154,13 +154,13 @@ alert(isFinite(result));  //false
             - 乱七八糟转为NaN
     - parseInt()：
 
-    ```JS
-    var num1 = parseInt("10",2);  //按二进制解析
-    var num2 = parseInt("10",8);  //按八进制解析
-    var num3 = parseInt("10",10);  //按十进制解析
-    var num4 = parseInt("10",16);  //按十六进制解析
-    ```
-    - parseFloat()：只解析十进制，一直解析到字符串末尾或者遇见一个无效的浮点数字字符为止。
+```JS
+var num1 = parseInt("10",2);  //按二进制解析
+var num2 = parseInt("10",8);  //按八进制解析
+var num3 = parseInt("10",10);  //按十进制解析
+var num4 = parseInt("10",16);  //按十六进制解析
+```
+- parseFloat()：只解析十进制，一直解析到字符串末尾或者遇见一个无效的浮点数字字符为止。
 
 ### String类型
 
@@ -169,10 +169,10 @@ alert(isFinite(result));  //false
     - 除了null和undefined值没有这个方法之外，其他类型都有；
     - 通过传递基数，可输出二、八、十六等任意有效进制的字符串值
 
-    ```javascript
-    var num = 10;
-    alert(num.toString(2));  // "1010"
-    ```
+```javascript
+var num = 10;
+alert(num.toString(2));  // "1010"
+```
 - String()
     - 如果值有toString()方法，则调用该方法（不带参数）并返回相应的结果；
     - 如果值是null，则返回null；
