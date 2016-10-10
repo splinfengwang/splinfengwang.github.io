@@ -110,10 +110,10 @@ var hexNum2 = 0x1f; //十六进制的31
 
     - e表示法（科学记数法）：用e表示法表示的数值等于e前面的数值乘以10的指数次幂。
 
-    ```js
-    var floatNum1 = 3.125e7;  //等于31250000
-    var floatNum2 = 3.125e-3;  //等于0.003125
-    ```
+```js
+var floatNum1 = 3.125e7;  //等于31250000
+var floatNum2 = 3.125e-3;  //等于0.003125
+```
 
     >关于浮点数值计算会产生舍入误差的问题。
 
@@ -122,10 +122,10 @@ var hexNum2 = 0x1f; //十六进制的31
     js的最大数值保存在 **`Number.MAX_VALUE`** 中，最小数值保存在 **`Number.MIN_VALUE`** 中。
 使用函数isFinite()，如果参数位于最小和最大值之间会返回true。
 
-    ```js
-    var result = Number.MAX_VALUE + Number.MIN_VALUE;
-    alert(isFinite(result));  //false
-    ```
+```js
+var result = Number.MAX_VALUE + Number.MIN_VALUE;
+alert(isFinite(result));  //false
+```
 
 - NaN：即非数值（Not a Number），是一个特殊的数值，这个数值用于表示一个本来要返回数值的操作数未返回数值的情况，从而避免抛出错误。
     >0除以0返回NaN，正数除以0返回Infinity，负数除以0返回-Infinity。
@@ -134,13 +134,13 @@ var hexNum2 = 0x1f; //十六进制的31
     - NaN与任何值都不相等，包括NaN本身。`alert(NaN == NaN); //false`
     - isNaN()函数，在接收到一个值之后，会尝试将这个值转换为数值。无法转换则返回false。
 
-        ```
-        alert(isNaN(NaN)); //true
-        alert(isNaN(10));  //false(转换成10)
-        alert(isNaN("10"));  //false(转换成10)
-        alert(isNaN("blue"));  //true
-        alert(isNaN(true));  //false(转换成1)
-        ```
+    ```
+    alert(isNaN(NaN)); //true
+    alert(isNaN(10));  //false(转换成10)
+    alert(isNaN("10"));  //false(转换成10)
+    alert(isNaN("blue"));  //true
+    alert(isNaN(true));  //false(转换成1)
+    ```
 
 - 数值转换
     - Number()：
@@ -154,12 +154,12 @@ var hexNum2 = 0x1f; //十六进制的31
             - 乱七八糟转为NaN
     - parseInt()：
 
-        ```JS
-        var num1 = parseInt("10",2);  //按二进制解析
-        var num2 = parseInt("10",8);  //按八进制解析
-        var num3 = parseInt("10",10);  //按十进制解析
-        var num4 = parseInt("10",16);  //按十六进制解析
-        ```
+    ```JS
+    var num1 = parseInt("10",2);  //按二进制解析
+    var num2 = parseInt("10",8);  //按八进制解析
+    var num3 = parseInt("10",10);  //按十进制解析
+    var num4 = parseInt("10",16);  //按十六进制解析
+    ```
     - parseFloat()：只解析十进制，一直解析到字符串末尾或者遇见一个无效的浮点数字字符为止。
 
 ### String类型
@@ -169,10 +169,10 @@ var hexNum2 = 0x1f; //十六进制的31
     - 除了null和undefined值没有这个方法之外，其他类型都有；
     - 通过传递基数，可输出二、八、十六等任意有效进制的字符串值
 
-        ```javascript
-        var num = 10;
-        alert(num.toString(2));  // "1010"
-        ```
+    ```javascript
+    var num = 10;
+    alert(num.toString(2));  // "1010"
+    ```
 - String()
     - 如果值有toString()方法，则调用该方法（不带参数）并返回相应的结果；
     - 如果值是null，则返回null；
@@ -181,9 +181,9 @@ var hexNum2 = 0x1f; //十六进制的31
 ### Object类型
 对象其实就是一组数据和功能的集合。对象可以通过执行new操作符后跟要创建的对象类型的名称来创建。而创建Object类型的实例并为其添加属性以及方法，就可以创建自定义对象，例如：
 
-    ```js
-    var o = new Object();
-    ```
+```js
+var o = new Object();
+```
 - Object类型是所有它的实例的基础。换句话说，Object类型所具有的任何属性和方法也同样存在与更具体的对象中。
 
 - Object的每个实例都具有下列属性和方法：
