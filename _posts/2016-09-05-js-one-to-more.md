@@ -29,3 +29,6 @@ event.type搭配switch语法
     btn.onclick = handler;
     btn.onmouseover = handler;
     btn.onmouseout = handler;
+
+
+附一个别人的文章讲的比较详细：[《我也来说说js的事件机制》](http://www.w3cfuns.com/notes/17398/8062de2558ef495ce6cb7679f940ae5c.html)
