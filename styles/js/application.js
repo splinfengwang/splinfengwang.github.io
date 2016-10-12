@@ -21,7 +21,7 @@
     }
 
     var $window = $(window)
-    var $body   = $('.sidebar')
+    var $body   = $('.row')
 
     $body.scrollspy({
       target: '.sidebar',
