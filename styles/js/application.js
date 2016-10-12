@@ -21,7 +21,7 @@
     }
 
     var $window = $(window)
-    var $body   = $('.row')
+    var $body   = $(document.body)
 
     $body.scrollspy({
       target: '.sidebar',
@@ -85,7 +85,8 @@
             var sideBarMargin  = parseInt($sideBar.children(0).css('margin-top'), 10)
             var navOuterHeight = $('.docs-nav').height()
 
-            return (this.top = offsetTop - navOuterHeight - sideBarMargin)
+            // return (this.top = offsetTop - navOuterHeight - sideBarMargin)
+            return (this.top = offsetTop - sideBarMargin)
           },
           bottom: function () {
             return (this.bottom = $('.footer').outerHeight(true))
