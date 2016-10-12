@@ -25,7 +25,7 @@
 
     $body.scrollspy({
       target: '.sidebar',
-      offset: 20 // required to select the right thing. if this is smaller then you are at the top of one section
+      //offset: 20 // required to select the right thing. if this is smaller then you are at the top of one section
                  // but the next section is highlighted
     });
 
@@ -85,8 +85,7 @@
             var sideBarMargin  = parseInt($sideBar.children(0).css('margin-top'), 10)
             var navOuterHeight = $('.docs-nav').height()
 
-            // return (this.top = offsetTop - navOuterHeight - sideBarMargin)
-            return (this.top = offsetTop - sideBarMargin)
+            return (this.top = offsetTop - navOuterHeight - sideBarMargin)
           },
           bottom: function () {
             return (this.bottom = $('.footer').outerHeight(true))
