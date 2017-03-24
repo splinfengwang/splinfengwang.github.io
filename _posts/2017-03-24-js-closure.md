@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  通过一个函数处理多个事件
-date:   2016/03/24 19:52:47  
+title:  闭包小结
+date:   2017/03/24 19:52:47  
 categories: Javascript
-tag: 闭包小结
+tag: 
 ---
 
 * content
