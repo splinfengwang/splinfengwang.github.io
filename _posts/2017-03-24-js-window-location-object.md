@@ -22,3 +22,15 @@ tag:
     window.protocol;    //"http"
     window.search;  //"?q=javascript"
 ```
+
+还有一些：
+```Javascript
+
+    //跳转
+    location.assign(url) ==> window.href = url ==> window.location = url;
+    //隐身模式
+    location.replace(url);
+    //刷新页面
+    location.reload();
+
+```
