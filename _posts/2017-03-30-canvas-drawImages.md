@@ -2,7 +2,7 @@
 layout: post
 title:  在canvas中引入一张图片并绘制
 date:   2017/03/30 17:52:47  
-categories: javascript
+categories: Javascript
 tag:
 ---
 
