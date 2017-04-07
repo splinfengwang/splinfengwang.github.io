@@ -39,9 +39,9 @@ Promise().then().then()...
 var P = Promise.all( [p1, p2, p3] );
 ```
 
- - 1.当`p1`，`p2`，`p3`都是`fullfilled`，`P`状态才会是`fullfilled`，三个实例的返回值组成数组返回给`p`
+ - 当`p1`，`p2`，`p3`都是`fullfilled`，`P`状态才会是`fullfilled`，三个实例的返回值组成数组返回给`p`
 
- - 2.当`p1`，`p2`，`p3`中有一个`rejected`，`p`就是`rejected`
+ - 当`p1`，`p2`，`p3`中有一个`rejected`，`p`就是`rejected`
 
 > `Promise.race()`同样将多个Promise实例包装成一个新的Promise实例
 
