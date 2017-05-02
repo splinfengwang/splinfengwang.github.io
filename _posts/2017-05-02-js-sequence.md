@@ -17,12 +17,12 @@ tag:
 
 #####冒泡算法实现
 ```Javascript
-    function mp(arr) {
-        var len = arr.length, i, j, t;
-        for(i = 0; i < len; i++){
-            for(j = 0; j < len - i; j++){
+    const mp = (arr) => {
+        let len = arr.length;
+        for(let = i = 0; i < len; i++){
+            for(let j = 0; j < len - i; j++){
                 if(arr[j] < arr[j+1]){ //内循环比较
-                    t = arr[j];
+                    let t = arr[j];
                     arr[j] = arr[j+1];
                     arr[j+1] = t;
                 }
@@ -34,12 +34,12 @@ tag:
 
 #####选择算法实现
 ```Javascript
-    function xz(arr) {
-        var len = arr.length, i, j, t;
-        for(i = 0; i < len-1; i++){
-            for(j = i+1; j < len; j++){
+    const xz = (arr) => {
+        let len = arr.length;
+        for(let i = 0; i < len-1; i++){
+            for(let j = i+1; j < len; j++){
                 if(arr[i] < arr[j]){    //内外循环比较
-                    t = arr[i];
+                    let t = arr[i];
                     arr[i] = arr[j];
                     arr[j] = t;
                 }
